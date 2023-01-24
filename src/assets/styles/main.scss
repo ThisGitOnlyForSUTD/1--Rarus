@@ -1,0 +1,47 @@
+@import "./vars.scss";
+@import "./fonts.scss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+body {
+  font-family: Roboto;
+  color: #333333;
+  font-size: 16px;
+  background: white;
+  margin-right: calc(100% - 100vw);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 808px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 340px) {
+    padding: 0 10px;
+  }
+}
+
+.no-scroll {
+  overflow-y:hidden;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
